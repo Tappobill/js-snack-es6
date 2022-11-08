@@ -31,5 +31,32 @@ function svuotaFun() {
 };
 
 
+// Versione con Filter
+
+// function estrazioneNomi(min, max) {
+//     const array2 = myArray.filter((elemento, index) => {
+//         if (index >= min && index <= max) {
+//             return true;
+//         }
+//     });
+
+//     array2.forEach((elemento) => {
+//         risultato.innerHTML += `<li>${elemento}</li>`;
+//     })
+// }
+
+// btnInvio.addEventListener("click", function () {
+//     array2 = [];
+//     svuotaFun();
+//     let min = inputMin.value;
+//     let max = inputMax.value;
+//     estrazioneNomi(min, max)
+// });
+
+// function svuotaFun() {
+//     risultato.innerHTML = "";
+// };
+
+
 
 
