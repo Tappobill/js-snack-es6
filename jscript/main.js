@@ -158,9 +158,42 @@ let biciLeggera = bici[0];
 for (let i = 0; i < bici.length; i++) {
     let elementoCorrente = bici[i];
     let { peso } = elementoCorrente;
-    if(peso < biciLeggera.peso){
+    if (peso < biciLeggera.peso) {
         biciLeggera = elementoCorrente;
     }
 }
 
 console.log(biciLeggera)
+
+
+// Snack4
+// Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti. Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+// Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti. Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+
+const teams = [
+    { nome: "Juventus", punti_fatti: 0, falli_subiti: 0 },
+    { nome: "Milan", punti_fatti: 0, falli_subiti: 0 },
+    { nome: "Inter", punti_fatti: 0, falli_subiti: 0 },
+    { nome: "Napoli", punti_fatti: 0, falli_subiti: 0 }
+];
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+const teamsCopia = teams.map((elemento) => {
+    elemento.punti_fatti = getRandomInt(1, 100);
+    elemento.falli_subiti = getRandomInt(1, 100);
+    return elemento
+});
+
+const teamsCopia1 = teams.map(({ nome, falli_subiti }) => {
+    falli_subiti = getRandomInt(1, 100);
+    return { falli_subiti, nome }
+});
+
+console.log(teamsCopia);
+console.log(teamsCopia1);
